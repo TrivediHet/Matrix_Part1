@@ -54,8 +54,8 @@ namespace Matrix.Data
         }
         public async Task<bool> UserNameValidity(string userName)
         {
-            var InvalidUserName = await _context.UserList.FirstOrDefaultAsync(u => u.UserName == userName);
-            if (InvalidUserName == null){
+            var UserFound = await _context.UserList.FirstOrDefaultAsync(u => u.UserName == userName);
+            if (UserFound == null){
                 return false;
             }else{
                 return true;
