@@ -21,12 +21,12 @@ namespace Matrix.Controllers
     public class AuthController : Controller
     {
         private readonly IAuthRepository _repo;
-        private readonly IConfiguration _conf;
+        private readonly IConfiguration _configuration;
 
-        public AuthController(IAuthRepository repo, IConfiguration conf)
+        public AuthController(IAuthRepository repo, IConfiguration configuration)
         {
             _repo = repo;
-            _conf = conf;
+            _configuration = configuration;
         }
 
         [HttpPost("register")]
@@ -41,7 +41,7 @@ namespace Matrix.Controllers
 
             // If duplicate user name and return bad request here
             // Need method in AuthRepo to test for this
-            if (_repo.UserNameValidity(user.UserName))
+            if (_repo.UserNameValidity(user.UserName).Result)
             {
                 ModelState.AddModelError("UserName", "User name already exists");
                 return BadRequest(ModelState);
@@ -62,7 +62,7 @@ namespace Matrix.Controllers
             }
 
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(_conf.GetSection("TokenSettings:JWTKey").Value);
+            var key = Encoding.ASCII.GetBytes(_configuration.GetSection("TokenSettings:JWTKey").Value);
             
             var tokenDescriptor = new SecurityTokenDescriptor
             {
