@@ -1,0 +1,12 @@
+C:\Users\HET_DSKTP\source\repos\Matrix\Matrix
+--output-path=obj\Release\netcoreapp2.0\
+--application-name=Matrix
+--content-root=C:\Users\HET_DSKTP\source\repos\Matrix\Matrix
+--file=C:\Users\HET_DSKTP\source\repos\Matrix\Matrix\Pages\About.cshtml
+--file=C:\Users\HET_DSKTP\source\repos\Matrix\Matrix\Pages\Contact.cshtml
+--file=C:\Users\HET_DSKTP\source\repos\Matrix\Matrix\Pages\Error.cshtml
+--file=C:\Users\HET_DSKTP\source\repos\Matrix\Matrix\Pages\Index.cshtml
+--file=C:\Users\HET_DSKTP\source\repos\Matrix\Matrix\Pages\_Layout.cshtml
+--file=C:\Users\HET_DSKTP\source\repos\Matrix\Matrix\Pages\_ValidationScriptsPartial.cshtml
+--file=C:\Users\HET_DSKTP\source\repos\Matrix\Matrix\Pages\_ViewImports.cshtml
+--file=C:\Users\HET_DSKTP\source\repos\Matrix\Matrix\Pages\_ViewStart.cshtml
