@@ -52,9 +52,9 @@ namespace Matrix.Data
             await _context.SaveChangesAsync();
             return newUser;
         }
-        public bool UserNameValidity(string userName)
+        public async Task<bool> UserNameValidity(string userName)
         {
-            var InvalidUserName = _context.UserList.FirstOrDefaultAsync(u => u.UserName == userName);
+            var InvalidUserName = await _context.UserList.FirstOrDefaultAsync(u => u.UserName == userName);
             if (InvalidUserName == null){
                 return false;
             }else{
