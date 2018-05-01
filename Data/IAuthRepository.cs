@@ -10,6 +10,6 @@ namespace Matrix.Data
     {
         Task<User> Register(string user, string password);
         Task<User> Login(string userName, string password);
-        bool UserNameValidity(string UserName);
+        Task<bool> UserNameValidity(string UserName);
     }
 }
